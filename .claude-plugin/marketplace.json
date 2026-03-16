@@ -1,0 +1,16 @@
+{
+  "marketplaceId": "deploi-cloud",
+  "name": "Deploi Cloud Plugins",
+  "description": "AI agent skills for Norwegian cloud hosting on Deploi.no",
+  "plugins": [
+    {
+      "name": "deploi",
+      "version": "1.0.0",
+      "description": "Provision and manage VPS servers, deploy apps, configure domains, DNS, SSL/HTTPS, firewalls, and databases on Deploi.no.",
+      "source": {
+        "source": "github",
+        "repo": "Deploi-Cloud/deploi-agent-skills"
+      }
+    }
+  ]
+}
