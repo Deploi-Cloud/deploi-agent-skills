@@ -1,0 +1,5 @@
+.env
+deploi-servers.json
+*.zip
+.DS_Store
+node_modules

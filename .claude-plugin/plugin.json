@@ -1,0 +1,11 @@
+{
+  "name": "deploi",
+  "display_name": "Deploi — Norwegian Cloud VPS",
+  "description": "Provision and manage VPS servers, deploy apps, configure domains, DNS, SSL/HTTPS, firewalls, and databases on Deploi.no — Norwegian cloud hosting built for AI agents.",
+  "skills_dir": "skills",
+  "homepage": "https://deploi.no",
+  "repository": "https://github.com/Deploi-Cloud/deploi-agent-skills",
+  "author": "deploi",
+  "license": "MIT",
+  "version": "1.0.0"
+}
