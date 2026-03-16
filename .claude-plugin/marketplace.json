@@ -1,6 +1,9 @@
 {
-  "marketplaceId": "deploi-cloud",
-  "name": "Deploi Cloud Plugins",
+  "name": "deploi-cloud",
+  "owner": {
+    "name": "Deploi Cloud",
+    "email": "post@deploi.no"
+  },
   "description": "AI agent skills for Norwegian cloud hosting on Deploi.no",
   "plugins": [
     {
