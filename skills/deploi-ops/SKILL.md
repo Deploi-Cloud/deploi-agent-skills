@@ -1,21 +1,6 @@
 ---
 name: deploi-ops
-description: >
-  Everything after server creation on Deploi VPS: deploy applications, manage domains,
-  DNS records, SSL certificates, HTTPS setup, firewall configuration, server restart,
-  CPU monitoring, databases, email services, billing, invoices. Use when the user wants
-  to deploy code to a Deploi server, register or configure domains, set up DNS, get
-  SSL/HTTPS working, manage firewalls, check server status, restart servers, monitor
-  resources, install software, configure web servers, manage Docker containers, set up
-  databases, or perform any server administration task on Deploi VPS. Also triggers for
-  keywords: deploy, domain, DNS, SSL, certificate, HTTPS, firewall, monitoring, billing,
-  email, restart, CPU, invoices, Deploi ops, server management.
-compatibility: Requires Node.js and SSH. Works with Claude Code, Cursor, Codex, and similar agents.
-allowed-tools: Bash Read Write Edit Grep
-metadata:
-  author: deploi
-  version: "1.0"
-  website: https://deploi.no
+description: "Everything after server creation on Deploi VPS: deploy applications, manage domains, DNS records, SSL certificates, HTTPS setup, firewall configuration, server restart, CPU monitoring, databases, email services, billing, invoices. Use when the user wants to deploy code to a Deploi server, register or configure domains, set up DNS, get SSL/HTTPS working, manage firewalls, check server status, restart servers, monitor resources, install software, configure web servers, manage Docker containers, set up databases, or perform any server administration task on Deploi VPS. Also triggers for keywords: deploy, domain, DNS, SSL, certificate, HTTPS, firewall, monitoring, billing, email, restart, CPU, invoices, Deploi ops, server management."
 ---
 
 # Deploi Ops — Server Management & Deployment

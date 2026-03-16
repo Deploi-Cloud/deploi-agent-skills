@@ -1,15 +1,6 @@
 ---
 name: deploi-server
-description: >
-  Provision and manage Deploi VPS servers: authenticate via API,
-  create servers with SSH access, and connect. Use when the user mentions Deploi,
-  wants a Norwegian cloud VPS, or asks to create/manage a server at deploi.no.
-compatibility: Requires Node.js and SSH. Works with Claude Code, Cursor, Codex, and similar agents.
-allowed-tools: Bash Read Write Edit Grep
-metadata:
-  author: deploi
-  version: "1.0"
-  website: https://deploi.no
+description: "Provision and manage Deploi VPS servers: authenticate via API, create servers with SSH access, and connect. Use when the user mentions Deploi, wants a Norwegian cloud VPS, or asks to create/manage a server at deploi.no."
 ---
 
 # Deploi Server — AI Agent Skill
