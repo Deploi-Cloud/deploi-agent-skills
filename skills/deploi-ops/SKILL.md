@@ -190,10 +190,10 @@ Get `server-id` from `GetServers` (the `id` field, not the name).
 |-----------|---------------|
 | First app ever | Core (4 GB RAM, 2 CPU, 40 GB) — room to grow |
 | Adding small side project | Use existing server if <3 apps and has headroom |
-| Database needs isolation | Dedicated Testing (1 GB) or Core (4 GB) |
+| Database needs isolation | Dedicated Start (1 GB) or Core (4 GB) |
 | App gets heavy traffic | Dedicated server, possibly larger custom spec |
 | Different OS needed | New server (can't change OS on existing) |
-| Staging/dev environment | Testing (1 GB) — cheap and disposable |
+| Staging/dev environment | Start (1 GB) — cheap and disposable |
 
 ---
 

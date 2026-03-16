@@ -138,16 +138,16 @@ Ask about their use case — you don't need to ask all of these, just enough to 
 If the user already knows exactly what they want, skip the questions and go straight to the proposal.
 
 **Guidance:**
-- **Simple web app / API:** Testing package (1 GB RAM) is usually enough to start
+- **Simple web app / API:** Start package (1 GB RAM) is usually enough to start
 - **Docker + database + app:** Core package (4 GB RAM) recommended
 - **Multiple services / heavier workloads:** Custom config with 8+ GB RAM
-- **Just experimenting / learning:** Testing package is perfect
+- **Just experimenting / learning:** Start package is perfect
 
 ### Step 2: Present packages and pricing
 
 | Package | RAM | vCPU | SSD | Price/month |
 |---------|-----|------|-----|-------------|
-| Testing | 1 GB | 1 | 10 GB | ~131 NOK |
+| Start | 1 GB | 1 | 10 GB | ~131 NOK |
 | Core | 4 GB | 2 | 40 GB | ~332 NOK |
 
 **Resource prices** (for custom configurations):
