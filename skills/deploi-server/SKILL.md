@@ -77,7 +77,7 @@ Extract and keep in memory for the session:
 **If `data.nextstep` is not `"none"`**, the user needs to complete additional steps (e.g., 2FA) — inform them.
 
 **Error handling:**
-- `"Email or Password Invalid"` (messageId -1) → credentials are wrong, ask user to verify
+- `"Email or Password Invalid"` (messageId 127) → credentials are wrong, ask user to verify
 - `"Request blocked"` (messageId 138) → you are using curl instead of Node.js, switch to the helper pattern
 
 ---

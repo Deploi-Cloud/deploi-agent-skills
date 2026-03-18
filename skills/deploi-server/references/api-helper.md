@@ -46,8 +46,7 @@ If any API call returns `{"success":false,"message":"Not logged in","messageId":
 ## API Error Reference
 
 | messageId | Message | Meaning |
-|-----------|---------|---------|
-| -1 | Email or Password Invalid | Wrong credentials |
+|---------|---------|---------|
 | 4 | Password must be at least 8 characters... | Server password too weak |
 | 8 | Memory must be more than 0... | RAM out of range (1-160 GB) |
 | 9 | CPU must be more than 0... | CPU out of range (1-80) |
@@ -58,6 +57,7 @@ If any API call returns `{"success":false,"message":"Not logged in","messageId":
 | 25 | Creating virtual server failed | Generic creation failure — check account limits or contact Deploi support |
 | 41 | Not logged in | Token expired or invalid — re-authenticate |
 | 80 | Server created | Success |
+| 127 | Email or Password Invalid | Wrong credentials |
 | 138 | Request blocked | Using curl — switch to Node.js |
 
 ## Important Notes
