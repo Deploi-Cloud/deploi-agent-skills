@@ -38,10 +38,7 @@ If `deploi-servers.json` is missing, the user needs to create a server first via
 
 ## API Foundations
 
-**Endpoint:** `https://api.deploi.no` — all commands are POST with JSON body.
-
-> **IMPORTANT:** Never use `curl` for Deploi API calls — it gets blocked (403 / messageId 138).
-> All API calls MUST use Node.js `https` module.
+**Endpoint:** `https://api.deploi.no` — all commands use HTTP POST requests with a JSON body.
 
 ### Node.js API Helper
 
@@ -85,7 +82,6 @@ If any API call returns `messageId: 41` ("Not logged in"), the token has expired
 | `GetServerInfo` | Yes | `token`, `id` | Server details (IP, specs) |
 | `CreateVirtualServer` | Yes | `token`, `clientid`, + specs | Create new VPS |
 | `RestartVirtualServer` | Yes | `token`, `id` | Restart a server |
-| `MonitorCPU` | Yes | `token`, `id` | CPU usage data |
 | `DomainAvailable` | **No** | `domain` | Check domain availability |
 | `GetDomainPrice` | **No** | `domain` | Get domain pricing |
 | `GetDomains` | Yes | `token`, `clientid` | List owned domains |
@@ -98,24 +94,6 @@ If any API call returns `messageId: 41` ("Not logged in"), the token has expired
 | `AddFirewallRule` | Yes | `token`, + rule | Add firewall rule |
 | `OrderEmailService` | Yes | `token`, `clientid`, + config | Order email hosting |
 | `GetInvoices` | Yes | `token`, `clientid` | List invoices |
-| `GetDatabases` | Yes | `token`, `clientid` | List managed databases |
-| `GetWordpress` | Yes | `token`, `clientid` | List WordPress instances |
-| `GetKubernetes` | Yes | `token`, `clientid` | List K8s clusters |
-| `GetVPNs` | Yes | `token`, `clientid` | List VPN services |
-
----
-
-## What API Can Do vs What Needs Kundepanel
-
-| Via API | Via kundepanel.deploi.no only |
-|---------|-------------------------------|
-| List/inspect/restart servers | Delete/cancel servers |
-| Monitor CPU | Resize server (upgrade/downgrade RAM/CPU/disk) |
-| Register domains, manage DNS | Change OS / reinstall |
-| Create managed firewall + rules | Manage payment methods |
-| Order email services | Support tickets |
-| Check invoices | Manage WordPress/K8s/VPN (read-only via API) |
-| Get user/account info | Two-factor authentication setup |
 
 ---
 
@@ -158,21 +136,16 @@ Get `server-id` from `GetServers` (the `id` field, not the name).
 
 **After restart:** Wait 30–60 seconds, then verify with `GetServerInfo` that status is `"active"`.
 
-### MonitorCPU
-
-```json
-{ "command": "MonitorCPU", "token": "<t>", "id": "<server-id>" }
-```
-
-**When to act:** Sustained >80% → investigate via SSH. Constant 100% → possible runaway process.
 
 ### Upgrade/Downgrade Server
 
-**No API endpoint for resizing.** Options:
+```json
+{ "command": "UpdateVirtualServer", "token": "<t>", "id": "<server-id>", "setCpu": true, "cpucent": cpucents, "setRam": false, "ram": gbram, "diskChange": [{"id": "<disk id>", "size": gbsize } ]}
+```
 
-**Option A: Kundepanel** — go to kundepanel.deploi.no → select server → resize
+Get `server-id` from `GetServers` (the `id` field, not the name).
 
-**Option B: Migrate** — create new server with desired specs, back up, restore, update DNS, delete old via kundepanel
+**After upgrade/downgrade:** Wait 30–90 seconds, then verify with `GetServerInfo` that `running` is `true`.
 
 ### Logout
 
